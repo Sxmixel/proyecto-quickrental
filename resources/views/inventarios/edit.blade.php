@@ -3,7 +3,7 @@
 @section('title', 'MIILE')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Editar inventarios</h1>
+    <h1 class="m-0 text-dark">Editar Producto</h1>
 @stop
 
 @section('content')
@@ -12,8 +12,45 @@
             @csrf
             @method('PUT')
             <div class="row">
-                <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del inventarios"
+                <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del producto"
                     fgroup-class="col-md-6" :value="$inventarios->nombre" />
+            </div>
+
+            <div class="row">
+                <x-adminlte-input name="tamaño" label="Tamaño" placeholder="Tamaño del producto (g)"
+                    fgroup-class="col-md-6" :value="$inventarios->tamaño" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="tiempo1" label="24h/1h" placeholder="Precio por 24h/1h"
+                    fgroup-class="col-md-6" :value="$inventarios->tiempo1" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="tiempo2" label="48h/2h" placeholder="Precio por 48h/2h"
+                    fgroup-class="col-md-6" :value="$inventarios->tiempo2" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="tiempo3" label="72h/3h" placeholder="Precio por 72h/3h"
+                    fgroup-class="col-md-6" :value="$inventarios->tiempo3" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="tiempo4" label="+4h" placeholder="Precio por +4h"
+                    fgroup-class="col-md-6" :value="$inventarios->tiempo4" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="lavado" label="Coste Lavado" placeholder="Precio del lavado del producto"
+                    fgroup-class="col-md-6" :value="$inventarios->lavado" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="deposito" label="Coste Depósito" placeholder="Precio del depósito incial"
+                    fgroup-class="col-md-6" :value="$inventarios->deposito" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="cantidad" label="Cantidad Total" placeholder="Cantidad total de productos"
+                    fgroup-class="col-md-6" :value="$inventarios->cantidad" />
+            </div>
+            <div class="row">
+                <x-adminlte-input name="disponible" label="Cantidad Disponible" placeholder="Cantidad de producto disponible"
+                    fgroup-class="col-md-6" :value="$inventarios->disponible" />
             </div>
 
             <div class="row">
@@ -27,23 +64,6 @@
                     <option value="Activo" {{ $inventarios->estado === 'Activo' ? 'selected' : '' }}>Activo</option>
                     <option value="Inactivo" {{ $inventarios->estado === 'Inactivo' ? 'selected' : '' }}>Inactivo</option>
                 </x-adminlte-select>
-            </div>
-
-            <div class="row">
-                <x-adminlte-input name="cedula" label="Cédula" placeholder="Cédula del inventarios"
-                    fgroup-class="col-md-6" :value="$inventarios->cedula" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="direccion" label="Dirección" placeholder="Dirección del inventarios"
-                    fgroup-class="col-md-6" :value="$inventarios->direccion" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="telefono" label="Teléfono" placeholder="Teléfono del inventarios"
-                    fgroup-class="col-md-6" :value="$inventarios->telefono" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="email" label="Email" placeholder="Email del inventarios"
-                    fgroup-class="col-md-6" :value="$inventarios->email" />
             </div>
 
             <div class="row">

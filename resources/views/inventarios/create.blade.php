@@ -3,7 +3,7 @@
 @section('title', 'MIILE')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Registrar Pedido</h1>
+    <h1 class="m-0 text-dark">Registrar Producto</h1>
 @stop
 
 @section('content')
@@ -11,25 +11,29 @@
         <form method="POST" action="{{ route('inventarios.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="row">
-                <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del usuario" fgroup-class="col-md-4" />
-                <x-adminlte-input name="telefono" label="Teléfono" placeholder="Teléfono del usuario" fgroup-class="col-md-4" />
-                <x-adminlte-input name="email" label="Correo Electrónico" placeholder="Email del usuario" fgroup-class="col-md-4" />
+                <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del producto" fgroup-class="col-md-6" />
+                <x-adminlte-input name="tamaño" label="Tamaño" placeholder="Tamaño del producto (g)" fgroup-class="col-md-6" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="objeto" label="Objeto para alquilar" placeholder="Objeto del Pedido" fgroup-class="col-md-4" />
-                <x-adminlte-input name="cantidad" label="Cantidad alquilada" placeholder="Cantidad del Pedido" fgroup-class="col-md-4" />
-                <x-adminlte-input name="tiempo" label="Tiempo alquilado" placeholder="Duración del Pedido" fgroup-class="col-md-4" />
+                <x-adminlte-input name="tiempo1" label="Precio por 24h/1h" placeholder="$$$" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo2" label="Precio por 48h/2h" placeholder="$$$" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo3" label="Precio por 72h/3h" placeholder="$$$" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo4" label="Precio por +4h" placeholder="$$$" fgroup-class="col-md-3" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="dia" label="Fecha de entrega" placeholder="DD/MM/AA" fgroup-class="col-md-4" />
-                <x-adminlte-input name="hora" label="Hora de entrega" placeholder="0:00" fgroup-class="col-md-4" />
-                <x-adminlte-input name="direccion" label="Dirección" placeholder="Dirección a entregar" fgroup-class="col-md-4" />
+                <x-adminlte-input name="lavado" label="Costo del lavado" placeholder="$$$" fgroup-class="col-md-6" />
+                <x-adminlte-input name="deposito" label="Depósito inicial" placeholder="$$$" fgroup-class="col-md-6" />
             </div>
 
             <div class="row">
-                <x-adminlte-select name="estado" label="Estado del Pedido" fgroup-class="col-md-2">
+                <x-adminlte-input name="cantidad" label="Cantidad total del producto" placeholder="###" fgroup-class="col-md-6" />
+                <x-adminlte-input name="disponible" label="Cantidad disponible del producto" placeholder="###" fgroup-class="col-md-6" />
+            </div>
+
+            <div class="row">
+                <x-adminlte-select name="estado" label="Estado del Producto" fgroup-class="col-md-2">
                     <x-slot name="prependSlot">
                         <div class="input-group-text bg-gradient-info">
                             <i class="fas fa-list"></i>
@@ -42,7 +46,7 @@
 
             <div class="row">
                 <div class="form-group col-md-6">
-                    <x-adminlte-button class="btn btn-primary mr-2" type="submit" label="Guardar Pedido" theme="primary"
+                    <x-adminlte-button class="btn btn-primary mr-2" type="submit" label="Guardar Producto" theme="primary"
                         icon="fas fa-save" />
                     <a href="{{ route('inventarios.index') }}" class="btn btn-secondary mr-2"><i
                             class="fas fa-undo"></i> Cancelar</a>

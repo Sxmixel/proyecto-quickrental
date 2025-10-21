@@ -9,7 +9,7 @@
 @section('content')
 <x-adminlte-card>
     @can('crear-gastos')
-    <a class="btn btn-primary mr-2" href="{{ route('inventarios.create') }}" role="button"><i class="fa fa-plus"></i> Nuevo Pedido</a>
+    <a class="btn btn-primary mr-2" href="{{ route('inventarios.create') }}" role="button"><i class="fa fa-plus"></i> Nuevo Producto</a>
     @endcan
 
     <div class="card-body">
@@ -18,20 +18,21 @@
         //$config['paging'] = true;
         //$config['lengthMenu'] = [10, 50, 100, 500];
         @endphp
-        <x-adminlte-datatable id="table1" :heads="['ID', 'Nombre', 'Telefono', 'Email', 'Objeto Alquilado', 'Cantidad Alquilada', 'Tiempo de Alquiler', 'Fecha de entrega', 'Hora de entrega', 'Dirección', 'Estado', 'Acciones']" head-theme="dark"
+        <x-adminlte-datatable id="table1" :heads="['ID', 'Nombre', 'Tamaño', '24h/1h', '48h/2h', '72h/3h', '+4h', 'Coste Lavado', 'Coste Depósito', 'Cantidad Total', 'Cantidad Disponible', 'Estado', 'Acciones']" head-theme="dark"
             :config=$config striped hoverable with-buttons>
             @foreach ($inventarios as $inventario)
             <tr>
                 <td>{{ $inventario->id }}</td>
                 <td>{{ $inventario->nombre }}</td>
-                <td>{{ $inventario->telefono }}</td>
-                <td>{{ $inventario->email }}</td>
-                <td>{{ $inventario->objeto }}</td>
+                <td>{{ $inventario->tamaño }}</td>
+                <td>{{ $inventario->tiempo1 }}</td>
+                <td>{{ $inventario->tiempo2 }}</td>
+                <td>{{ $inventario->tiempo3 }}</td>
+                <td>{{ $inventario->tiempo4 }}</td>
+                <td>{{ $inventario->lavado }}</td>
+                <td>{{ $inventario->deposito }}</td>
                 <td>{{ $inventario->cantidad }}</td>
-                <td>{{ $inventario->tiempo }}</td>
-                <td>{{ $inventario->dia }}</td>
-                <td>{{ $inventario->hora }}</td>
-                <td>{{ $inventario->direccion }}</td>
+                <td>{{ $inventario->disponible }}</td>
                 <td>
                     @if ($inventario->estado == "Activo")
                     <h5><span class="badge badge-success">{{ $inventario->estado }}</span></h5>
@@ -39,24 +40,26 @@
                     <h5><span class="badge badge-danger">{{ $inventario->estado }}</span></h5>
                     @endif
                 </td>
-                <td>
-                    <a class="btn btn-info" href="{{ route('inventarios.show', $inventario->id) }}" role="button">
-                        <i class="far fa-eye fa-fw"></i></a>
-                    @can('editar-gastos')
-                    <a class="btn btn-success" href="{{ route('inventarios.edit', $inventario->id) }}"
-                        role="button">
-                        <i class="fas fa-pencil-alt fa-fw"></i></a>
-                    @endcan
-                    @can('borrar-gastos')
-                    <form method="POST" action="{{ route('inventarios.destroy', $inventario->id) }}"
-                        style="display: inline;" class="delete-form">
-                        @csrf
-                        @method('DELETE')
-                        <button type="button" class="btn btn-warning delete-button">
-                            <i class="far fa-trash-alt fa-fw"></i>
-                        </button>
-                    </form>
-                    @endcan
+                <td class="text-center">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-info btn-sm" href="{{ route('inventarios.show', $inventario->id) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        @can('editar-gastos')
+                        <a class="btn btn-success btn-sm" href="{{ route('inventarios.edit', $inventario->id) }}">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
+                        @endcan
+                        @can('borrar-gastos')
+                        <form method="POST" action="{{ route('inventarios.destroy', $inventario->id) }}" class="delete-form" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-warning btn-sm delete-button">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </form>
+                        @endcan
+                    </div>
                 </td>
             </tr>
             @endforeach

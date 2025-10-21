@@ -72,8 +72,7 @@
 
 @section('footer')
 <footer>
-    <p><img src="{{ asset('vendor/adminlte/dist/img/fralgom-foot.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Fralgóm
-        Ingeniería Informática. Todos los derechos reservados.</p>
+    <p><img src="{{ asset('vendor/adminlte/dist/img/fralgom-foot.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Proyecto de técnica grado 11. Todos los derechos reservados.</p>
 </footer>
 @stop
 

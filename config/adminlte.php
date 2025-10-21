@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'MIILE 1.0',
+    'title' => 'QuickRental',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>MIILE</b> 1.0',
-    'logo_img' => 'vendor/adminlte/dist/img/Icono.Jpeg',
+    'logo' => '<b>QuickRental</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/Iconoo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',

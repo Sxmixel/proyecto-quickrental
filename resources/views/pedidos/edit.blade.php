@@ -13,7 +13,29 @@
             @method('PUT')
             <div class="row">
                 <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del pedidos"
-                    fgroup-class="col-md-6" :value="$pedidos->nombre" />
+                    fgroup-class="col-md-4" :value="$pedidos->nombre" />
+                 <x-adminlte-input name="telefono" label="Teléfono" placeholder="Teléfono del usuario"
+                    fgroup-class="col-md-4" :value="$pedidos->telefono" />
+                <x-adminlte-input name="email" label="Correo Electrónico" placeholder="Email del usuario"
+                    fgroup-class="col-md-4" :value="$pedidos->email" />
+            </div>
+
+            <div class="row">
+                <x-adminlte-input name="objeto" label="Objeto para alquilar" placeholder="Objeto del Pedido"
+                    fgroup-class="col-md-4" :value="$pedidos->objeto" />
+                <x-adminlte-input name="cantidad" label="Cantidad alquilada" placeholder="Cantidad del Pedido"
+                    fgroup-class="col-md-4" :value="$pedidos->cantidad" />
+                <x-adminlte-input name="tiempo" label="Tiempo alquilado" placeholder="Duración del Pedido"
+                    fgroup-class="col-md-4" :value="$pedidos->tiempo" />
+            </div>
+
+            <div class="row">
+                <x-adminlte-input name="dia" label="Fecha de entrega" placeholder="DD/MM/AA"
+                    fgroup-class="col-md-4" :value="$pedidos->dia" />
+                <x-adminlte-input name="hora" label="Hora de entrega" placeholder="0:00"
+                    fgroup-class="col-md-4" :value="$pedidos->hora" />
+                <x-adminlte-input name="direccion" label="Dirección" placeholder="Dirección a entregar"
+                    fgroup-class="col-md-4" :value="$pedidos->direccion" />
             </div>
 
             <div class="row">
@@ -27,23 +49,6 @@
                     <option value="Activo" {{ $pedidos->estado === 'Activo' ? 'selected' : '' }}>Activo</option>
                     <option value="Inactivo" {{ $pedidos->estado === 'Inactivo' ? 'selected' : '' }}>Inactivo</option>
                 </x-adminlte-select>
-            </div>
-
-            <div class="row">
-                <x-adminlte-input name="cedula" label="Cédula" placeholder="Cédula del pedidos"
-                    fgroup-class="col-md-6" :value="$pedidos->cedula" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="direccion" label="Dirección" placeholder="Dirección del pedidos"
-                    fgroup-class="col-md-6" :value="$pedidos->direccion" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="telefono" label="Teléfono" placeholder="Teléfono del pedidos"
-                    fgroup-class="col-md-6" :value="$pedidos->telefono" />
-            </div>
-            <div class="row">
-                <x-adminlte-input name="email" label="Email" placeholder="Email del pedidos"
-                    fgroup-class="col-md-6" :value="$pedidos->email" />
             </div>
 
             <div class="row">
@@ -67,6 +72,6 @@
 
 @section('footer')
     <footer>
-        <p><img src="{{ asset('vendor/adminlte/dist/img/fralgom-foot.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Proyecto de técnica grado 11. Todos los derechos reservados.</p>
+        <p><img src="{{ asset('vendor/adminlte/dist/img/Icono-small.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Proyecto de técnica grado 11. Todos los derechos reservados.</p>
     </footer>
 @stop

@@ -14,41 +14,31 @@
             <div class="row">
                 <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del producto"
                     fgroup-class="col-md-6" :value="$inventarios->nombre" />
-            </div>
-
-            <div class="row">
                 <x-adminlte-input name="tamaño" label="Tamaño" placeholder="Tamaño del producto (g)"
                     fgroup-class="col-md-6" :value="$inventarios->tamaño" />
             </div>
+
             <div class="row">
                 <x-adminlte-input name="tiempo1" label="24h/1h" placeholder="Precio por 24h/1h"
-                    fgroup-class="col-md-6" :value="$inventarios->tiempo1" />
-            </div>
-            <div class="row">
+                    fgroup-class="col-md-3" :value="$inventarios->tiempo1" />
                 <x-adminlte-input name="tiempo2" label="48h/2h" placeholder="Precio por 48h/2h"
-                    fgroup-class="col-md-6" :value="$inventarios->tiempo2" />
-            </div>
-            <div class="row">
+                    fgroup-class="col-md-3" :value="$inventarios->tiempo2" />
                 <x-adminlte-input name="tiempo3" label="72h/3h" placeholder="Precio por 72h/3h"
-                    fgroup-class="col-md-6" :value="$inventarios->tiempo3" />
-            </div>
-            <div class="row">
+                    fgroup-class="col-md-3" :value="$inventarios->tiempo3" />
                 <x-adminlte-input name="tiempo4" label="+4h" placeholder="Precio por +4h"
-                    fgroup-class="col-md-6" :value="$inventarios->tiempo4" />
+                    fgroup-class="col-md-3" :value="$inventarios->tiempo4" />
             </div>
+
             <div class="row">
                 <x-adminlte-input name="lavado" label="Coste Lavado" placeholder="Precio del lavado del producto"
                     fgroup-class="col-md-6" :value="$inventarios->lavado" />
-            </div>
-            <div class="row">
                 <x-adminlte-input name="deposito" label="Coste Depósito" placeholder="Precio del depósito incial"
                     fgroup-class="col-md-6" :value="$inventarios->deposito" />
             </div>
+
             <div class="row">
                 <x-adminlte-input name="cantidad" label="Cantidad Total" placeholder="Cantidad total de productos"
                     fgroup-class="col-md-6" :value="$inventarios->cantidad" />
-            </div>
-            <div class="row">
                 <x-adminlte-input name="disponible" label="Cantidad Disponible" placeholder="Cantidad de producto disponible"
                     fgroup-class="col-md-6" :value="$inventarios->disponible" />
             </div>
@@ -87,6 +77,6 @@
 
 @section('footer')
     <footer>
-        <p><img src="{{ asset('vendor/adminlte/dist/img/fralgom-foot.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Proyecto de técnica grado 11. Todos los derechos reservados.</p>
+        <p><img src="{{ asset('vendor/adminlte/dist/img/Icono-small.png') }}" alt="Logo Fralgom"> © {{ date('Y') }} Proyecto de técnica grado 11. Todos los derechos reservados.</p>
     </footer>
 @stop

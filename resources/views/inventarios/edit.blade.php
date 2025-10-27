@@ -14,32 +14,32 @@
             <div class="row">
                 <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del producto"
                     fgroup-class="col-md-6" :value="$inventarios->nombre" />
-                <x-adminlte-input name="tamaño" label="Tamaño" placeholder="Tamaño del producto (g)"
+                <x-adminlte-input name="tamaño" label="Tamaño (kg)" placeholder="Si no aplica, colocar X"
                     fgroup-class="col-md-6" :value="$inventarios->tamaño" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="tiempo1" label="24h/1h" placeholder="Precio por 24h/1h"
+                <x-adminlte-input name="tiempo1" label="24h/1h" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-3" :value="$inventarios->tiempo1" />
-                <x-adminlte-input name="tiempo2" label="48h/2h" placeholder="Precio por 48h/2h"
+                <x-adminlte-input name="tiempo2" label="48h/2h" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-3" :value="$inventarios->tiempo2" />
-                <x-adminlte-input name="tiempo3" label="72h/3h" placeholder="Precio por 72h/3h"
+                <x-adminlte-input name="tiempo3" label="72h/3h" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-3" :value="$inventarios->tiempo3" />
-                <x-adminlte-input name="tiempo4" label="+4h" placeholder="Precio por +4h"
+                <x-adminlte-input name="tiempo4" label="+4h" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-3" :value="$inventarios->tiempo4" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="lavado" label="Coste Lavado" placeholder="Precio del lavado del producto"
+                <x-adminlte-input name="lavado" label="Coste Lavado" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-6" :value="$inventarios->lavado" />
-                <x-adminlte-input name="deposito" label="Coste Depósito" placeholder="Precio del depósito incial"
+                <x-adminlte-input name="deposito" label="Coste Depósito" type="number" placeholder="Si no aplica, colocar 0"
                     fgroup-class="col-md-6" :value="$inventarios->deposito" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="cantidad" label="Cantidad Total" placeholder="Cantidad total de productos"
+                <x-adminlte-input name="cantidad" label="Cantidad Total" type="number"
                     fgroup-class="col-md-6" :value="$inventarios->cantidad" />
-                <x-adminlte-input name="disponible" label="Cantidad Disponible" placeholder="Cantidad de producto disponible"
+                <x-adminlte-input name="disponible" label="Cantidad Disponible" type="number"
                     fgroup-class="col-md-6" :value="$inventarios->disponible" />
             </div>
 

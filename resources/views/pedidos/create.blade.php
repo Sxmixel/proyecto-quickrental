@@ -12,19 +12,19 @@
             @csrf
             <div class="row">
                 <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del usuario" fgroup-class="col-md-4" />
-                <x-adminlte-input name="telefono" label="Teléfono" placeholder="Teléfono del usuario" fgroup-class="col-md-4" />
-                <x-adminlte-input name="email" label="Correo Electrónico" placeholder="Email del usuario" fgroup-class="col-md-4" />
+                <x-adminlte-input name="telefono" label="Teléfono" type="tel" fgroup-class="col-md-4" />
+                <x-adminlte-input name="email" label="Correo Electrónico" type="email" fgroup-class="col-md-4" />
             </div>
 
             <div class="row">
                 <x-adminlte-input name="objeto" label="Objeto para alquilar" placeholder="Objeto del Pedido" fgroup-class="col-md-4" />
-                <x-adminlte-input name="cantidad" label="Cantidad alquilada" placeholder="Cantidad del Pedido" fgroup-class="col-md-4" />
+                <x-adminlte-input name="cantidad" label="Cantidad alquilada" type="number" fgroup-class="col-md-4" />
                 <x-adminlte-input name="tiempo" label="Tiempo alquilado" placeholder="Duración del Pedido" fgroup-class="col-md-4" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="dia" label="Fecha de entrega" placeholder="DD/MM/AA" fgroup-class="col-md-4" />
-                <x-adminlte-input name="hora" label="Hora de entrega" placeholder="0:00" fgroup-class="col-md-4" />
+                <x-adminlte-input name="dia" label="Fecha de entrega" type="date" fgroup-class="col-md-4" />
+                <x-adminlte-input name="hora" label="Hora de entrega" type="time" fgroup-class="col-md-4" />
                 <x-adminlte-input name="direccion" label="Dirección" placeholder="Dirección a entregar" fgroup-class="col-md-4" />
             </div>
 

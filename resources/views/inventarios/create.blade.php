@@ -12,24 +12,24 @@
             @csrf
             <div class="row">
                 <x-adminlte-input name="nombre" label="Nombre" placeholder="Nombre del producto" fgroup-class="col-md-6" />
-                <x-adminlte-input name="tamaño" label="Tamaño" placeholder="Tamaño del producto (g)" fgroup-class="col-md-6" />
+                <x-adminlte-input name="tamaño" label="Tamaño (kg)" placeholder="Si no aplica, colocar X" fgroup-class="col-md-6" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="tiempo1" label="Precio por 24h/1h" placeholder="$$$" fgroup-class="col-md-3" />
-                <x-adminlte-input name="tiempo2" label="Precio por 48h/2h" placeholder="$$$" fgroup-class="col-md-3" />
-                <x-adminlte-input name="tiempo3" label="Precio por 72h/3h" placeholder="$$$" fgroup-class="col-md-3" />
-                <x-adminlte-input name="tiempo4" label="Precio por +4h" placeholder="$$$" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo1" label="Precio por 24h/1h" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo2" label="Precio por 48h/2h" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo3" label="Precio por 72h/3h" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-3" />
+                <x-adminlte-input name="tiempo4" label="Precio por +4h" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-3" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="lavado" label="Costo del lavado" placeholder="$$$" fgroup-class="col-md-6" />
-                <x-adminlte-input name="deposito" label="Depósito inicial" placeholder="$$$" fgroup-class="col-md-6" />
+                <x-adminlte-input name="lavado" label="Costo del lavado" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-6" />
+                <x-adminlte-input name="deposito" label="Depósito inicial" type="number" placeholder="Si no aplica, colocar 0" fgroup-class="col-md-6" />
             </div>
 
             <div class="row">
-                <x-adminlte-input name="cantidad" label="Cantidad total del producto" placeholder="###" fgroup-class="col-md-6" />
-                <x-adminlte-input name="disponible" label="Cantidad disponible del producto" placeholder="###" fgroup-class="col-md-6" />
+                <x-adminlte-input name="cantidad" label="Cantidad total del producto" type="number" fgroup-class="col-md-6" />
+                <x-adminlte-input name="disponible" label="Cantidad disponible del producto" type="number" fgroup-class="col-md-6" />
             </div>
 
             <div class="row">

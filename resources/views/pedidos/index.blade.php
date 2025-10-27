@@ -39,24 +39,26 @@
                     <h5><span class="badge badge-danger">{{ $pedido->estado }}</span></h5>
                     @endif
                 </td>
-                <td>
-                    <a class="btn btn-info" href="{{ route('pedidos.show', $pedido->id) }}" role="button">
-                        <i class="far fa-eye fa-fw"></i></a>
-                    @can('editar-gastos')
-                    <a class="btn btn-success" href="{{ route('pedidos.edit', $pedido->id) }}"
-                        role="button">
-                        <i class="fas fa-pencil-alt fa-fw"></i></a>
-                    @endcan
-                    @can('borrar-gastos')
-                    <form method="POST" action="{{ route('pedidos.destroy', $pedido->id) }}"
-                        style="display: inline;" class="delete-form">
-                        @csrf
-                        @method('DELETE')
-                        <button type="button" class="btn btn-warning delete-button">
-                            <i class="far fa-trash-alt fa-fw"></i>
-                        </button>
-                    </form>
-                    @endcan
+                <td class="text-center">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-info btn-sm" href="{{ route('pedidos.show', $pedido->id) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        @can('editar-gastos')
+                        <a class="btn btn-success btn-sm" href="{{ route('pedidos.edit', $pedido->id) }}">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
+                        @endcan
+                        @can('borrar-gastos')
+                        <form method="POST" action="{{ route('pedidos.destroy', $pedido->id) }}" class="delete-form" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-warning btn-sm delete-button">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </form>
+                        @endcan
+                    </div>
                 </td>
             </tr>
             @endforeach
